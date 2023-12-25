@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Homayra</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
+</head>
+<body>
+    <div class="login-section">
+        <div class="login-box">
+            <div class="title-area">
+                <h1 id="title">Welcome to Bank Homayra</h1>
+                <h3 id="welcome-massege">Your finance planner</h3>
+            </div>
+            <div class="form-area">
+                <label for="username">User Name</label>
+                <div class="input-tag mb-10">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="number" name="" class="user" id="username" placeholder="Enter User Name">
+                    
+                </div>
+                <label for="password">Password</label>
+                <div class="input-tag">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" name="" id="password" placeholder="Enter User password">
+                    <!-- <i class="fa-regular fa-eye" id="show-hide"></i> -->
+                    <img src="eye-off.svg" alt="" class="show-hide" id="show-hide">
+                    
+                </div>
+            </div>
+            <div class="submit-area">
+                <p class="text-danger d-nonee" id="pass-wrong">Wrong Password</p>
+                <button id="login-btn" class="btn-primary btn">Login</button>
+                <a href="#" id="forget">Forget your Password</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="#">Homayra</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Dashboard</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-lightbulb"></i> Plans</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-user"></i> Create Account</a>
+                  <a class="nav-link help" href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
+                  <!-- <a class="nav-link" href="#"><img src="squre.jpeg" id="profile" alt=""> J.Talukdar</a> -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="squre.jpeg" id="profile" alt=""> J.Talukdar
+                    </a>
+                    <div class="dropdown-menu" >
+                        <a class="dropdown-item" href="#">profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Log Out</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          
+          <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-3">
+                    <div class="display-1 bg-success">
+                        <h4>Diposit</h4>
+                        <h2>$ <span id="diposit-amount">4800</span></h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-3">
+                    <div class="display-2 bg-danger">
+                        <h4>withdarw</h4>
+                        <h2>$ <span id="withdraw-amount">3600</span></h2>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-3">
+                    <div class="display-3 bg-primary">
+                        <h4>Balance</h4>
+                        <h2>$ <span id="balance">1200</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 d-flex justify-content-center">
+                        <div class="input-section-1 bg-success col-md-10">
+                            <h4>Diposit</h4>
+                            <input type="number" name="" id="diposit-input">
+                            <button class="btn btn-outline-light" id="diposit-btn">Submit</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 d-flex justify-content-center">
+                        <div class="input-section-2 bg-danger col-md-10">
+                            <h4>withdraw</h4>
+                            <input type="number" name="" id="withdraw-input">
+                            <button class="btn btn-outline-light" id="withdraw-btn">Submit</button>
+                        </div>
+                </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    
+    <script>
+        // document.getElementById("diposit-btn").addEventListener("click", function(){
+        //     const dipositAmount = document.getElementById("diposit-amount");
+        //     const dipositValue = parseInt(dipositAmount.innerHTML);
+
+        //     const dipositInputAmount = document.getElementById("diposit-input");
+        //     const dipositInputValue = parseInt(dipositInputAmount.value);
+            
+        //     const balanceAmount = document.getElementById("balance");
+        //     const balance = parseInt(balanceAmount.innerHTML);
+
+        //     dipositAmount.innerHTML = dipositValue + dipositInputValue;
+        //     dipositInputAmount.value = "";
+        //     balanceAmount.innerHTML = balance + dipositInputValue;
+            
+
+        // });
+        // document.getElementById("withdraw-btn").addEventListener("click", function(){
+        //     const withdrawAmount = document.getElementById("withdraw-amount");
+        //     const withdraw = parseInt(withdrawAmount.innerHTML);
+
+        //     const withdrawInput = document.getElementById("withdraw-input");
+        //     const withdrawValue = parseInt(withdrawInput.value);
+
+        //     const balanceAmount = document.getElementById("balance");
+        //     const balance = parseInt(balanceAmount.innerHTML);
+
+        //     withdrawAmount.innerHTML = withdraw + withdrawValue;
+        //     balanceAmount.innerHTML = balance - withdrawValue;
+        //     withdrawInput.value = "";
+        // });
+
+            document.getElementById("diposit-btn").addEventListener("click", function(){
+                bankStaitment("diposit");
+            });
+            document.getElementById("withdraw-btn").addEventListener("click", function(){
+                bankStaitment("withdraw");
+            });
+            document.getElementById("")
+            const userName = 98165091;
+            const password = "112233"
+            document.getElementById("login-btn").addEventListener("click", function(){
+                login();
+            });
+            document.getElementById("show-hide").addEventListener("click", function(){
+                const passType = document.getElementById("password");
+                const eyeIcon = document.getElementById("show-hide");
+                if(passType.type == "password"){
+                    passType.type = "text";
+                    eyeIcon.src = "eye-off.svg";
+                }
+                else if (passType.type == "text"){
+                    passType.type = "password";
+                    eyeIcon.src = "eye-on.webp";
+                }
+            });
+
+            function login (){
+                const user = document.getElementById("username").value;
+                const pass = document.getElementById("password").value;
+
+                const loginSection = document.getElementsByClassName("login-section")[0];
+                const heroSection = document.getElementsByClassName("hero-section")[0];
+                if(user == userName && pass == password){
+                    loginSection.style.display = "none";
+                    heroSection.style.display = "block";
+                }
+                else {
+                    document.getElementById("pass-wrong").style.display = "block";
+                }
+            }
+
+        function bankStaitment (type){
+            const displayAmount = document.getElementById(type + "-amount");
+            const displayValue = parseInt(displayAmount.innerHTML);
+
+            const inputAmount = document.getElementById(type + "-input");
+            const inputValue = parseInt(inputAmount.value);
+            
+            const balanceAmount = document.getElementById("balance");
+            const balance = parseInt(balanceAmount.innerHTML);
+
+            if(type == "diposit"){
+                displayAmount.innerHTML = displayValue + inputValue;
+                balanceAmount.innerHTML = balance + inputValue;
+            }
+            else if (type == "withdraw"){
+                displayAmount.innerHTML = displayValue + inputValue;
+                balanceAmount.innerHTML = balance - inputValue;
+            }
+            inputAmount.value = "";
+                
+        };
+    </script>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
